@@ -1,0 +1,536 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+  box-sizing: border-box;
+  font-family: "interstate", sans-serif;
+  margin: 0;
+}
+
+@font-face {
+  font-family: Interstate, Tahoma, sans-serif;
+  src:  url()
+}
+
+
+
+/* Root Styles */
+
+html {
+  background-color: #888;
+  font-weight: 500;
+  height: auto;
+  width: auto;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+h1 {
+  color: #666;
+}
+
+a h1 {
+  color: #666;
+  transition: color 0.5s ease;
+}
+
+a h1:hover {
+  color: #518C8C;
+  transition: color 0.5s ease;  
+}
+
+h2 {
+  color: #666;
+  font-weight: 500;
+}
+
+h11 {
+  text-transform: uppercase;
+  font-weight: 600;
+  /*transition: color 0.5s ease;*/
+}  
+
+/*
+h11:hover {
+  color: #FFF;
+  transition: color 0.5s ease;
+}
+*/
+
+p {
+  color: #888;
+}
+
+/* header styles */
+left {
+  background-color: #E5E5E5;
+}
+
+left h1 {
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+left p {
+  color: #888;
+}
+
+right {
+  background-color: #FFF;
+}
+
+a {
+  text-decoration: none;
+  color: #BF396A;
+  transition: color 0.5s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #518C8C;
+  transition: color 0.5s ease;
+}
+
+/*
+.button {
+  display: block;
+  justify-content: center;
+  width: auto;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF;
+  background-color: #4E93BD;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+
+.button:hover {
+  background-color: #E576C0;
+  transition: background-color 0.5s ease;
+}
+  */
+
+
+
+/* responsive desktop header */
+@media screen and (min-width: 768px) {
+  left {
+    position: absolute;
+    left: 10px; top: 10px; bottom: 10px; 
+    width: 280px;
+    border-radius: 20px;
+    overflow: scroll;
+    padding: 10px;
+    transition: width 0.5s ease;
+  }
+  
+  .logo img {
+    display: block;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 20px;
+    object-fit: cover;
+    object-position: 50% 0;
+    width: 125px;
+    height: 125px;
+    transition: height 0.5s ease;
+  }
+  
+  .name {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    text-align: center;
+    transition: margin-top 0.2s ease;
+  }
+  
+  .name h1 {
+    margin-bottom: 25px;
+  }
+
+  .nav {
+    margin-top: 35px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h11 {
+    font-size: 2.5rem;
+    /*transition: color 0.5s ease;*/
+  }  
+  
+  p {
+    font-size: 1.25rem;
+  }
+  
+  nav div {
+    text-align: center;
+    margin: 10px 0 10px 0;
+  }
+  
+  nav a {
+    font-size: 1.25rem;
+  }
+
+  h1, h2, h11, p, nav a {
+    transition: font-size 0.5s ease;
+  }
+
+  
+  @media screen and (max-height: 660px) {
+    .logo img {
+      height: 0px;
+      transition: height 0.5s ease;
+    }
+    
+    .name {
+      margin-top: 10px;
+      transition: margin-top 0.5s ease;
+    }
+  }
+  
+/* responsive desktop content */
+  right {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    jutify-content: space-evenly;
+    left: 300px; top: 10px; bottom: 10px; right: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: scroll;
+    transition: all 0.5s ease;
+  }
+  
+  .banner {
+    display: flex;
+    align-items:  center;
+    justify-content: left;
+    padding: 20px;
+    flex-grow: 1;
+    border-radius: 15px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  #banner1 {
+    background-size: cover;
+    background-image: url("../resources/images/rivulets/riv2.webp");
+    background-position: 0 30%;
+    margin-bottom: 5px;
+  }
+
+  #banner2 {
+    background-size: cover;
+    background-image: url("../resources/images/rivulets/riv5.webp");
+    background-position: 0 75%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  #banner3 {
+    background-size: cover;
+    background-image: url("../resources/images/rivulets/riv7.webp");
+    background-position: 0 50%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  #banner4 {
+    background-size: cover;
+    background-image: url("../resources/images/rivulets/riv6.webp");
+    background-position: 0 20%;
+    margin-top: 5px;
+  }  
+  
+  .bs, .bso, .bso-link {
+    position: absolute;
+    left:0;right:0;top:0;bottom:0;
+    display: block;
+    padding: 5px 20px;
+    color: #888;
+    border-radius: 15px;
+  }
+  
+  .bs {
+    z-index: 1;
+  }
+  
+  .bso {
+    cursor: pointer;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.5);
+    opacity: 1.0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .bso:hover {
+    background-color: rgba(255,255,255,0.55);
+    opacity: 0.0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .title {
+    position: relative;
+    z-index: 15;
+    display: block;
+    padding: 0 15px;
+    background-color: #FFF;
+    border-radius: 15px;
+    border: 3px #BF396A solid;
+    color: #BF396A;
+    pointer-events: none;
+  }
+  
+  .bso:hover ~ .title {
+    color: #518C8C;
+    border: 3px #518C8C solid;
+  }
+}
+  
+  
+  
+/* responsive mobile header */
+@media screen and (max-width: 767px) {
+  left {
+    position: absolute;
+    left: 10px; right: 10px; top: 10px; bottom: 10px; 
+    height: 200px;
+    border-radius: 20px;
+    overflow: scroll;
+    padding: 10px;
+    transition: all 0.5s ease;
+  }
+  
+  .logo img {
+    display: none;
+    transition: all 0.5s ease;
+  }
+  
+  .name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: all 0.5s ease;
+  }
+  
+  .name h1 {
+    margin-bottom: 10px;
+  }
+
+  #main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    gap: 20px;
+  }
+  
+  .nav-item a {
+    text-transform: uppercase;
+    display: flex;
+    color: #FFF;
+    background-color: #BF396A;
+    border: solid 2px #FFF;
+    border-radius: 10px; 
+    padding: 2px 15px;
+    transition: all 0.5s ease;
+  }
+  
+  .nav-item a:hover {
+    background-color: #518C8C;
+    transition: all 0.5s ease;
+  }
+  
+  .nav {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  }
+  
+  h2 {
+    display: none;
+  }
+
+  h11 {
+    font-size: 2.5rem;
+    /*transition: color 0.5s ease;*/
+  }  
+  
+  p {
+    font-size: 1.75rem;
+  }
+  
+  nav div {
+    text-align: center;
+    margin: 10px 0 10px 0;
+  }
+  
+  nav a {
+    font-size: 1.75rem;
+  }
+
+  
+  nav div {
+    text-align: center;
+    margin: 10px 0 10px 0;
+  }
+  
+  nav a {
+    font-size: 1.75rem;
+  }
+
+  h1, h2, h11, p, nav a {
+    transition: font-size 0.5s ease;
+  }
+  
+  #nav3, #nav4, #nav5, #nav6 {
+    display: none;
+  }
+
+/*responsive mobile content */  
+  right {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    jutify-content: space-evenly;
+    left: 10px; top: 220px; bottom: 10px; right: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: scroll;
+    transition: all 0.5s ease;
+  }
+  
+  .banner {
+    display: flex;
+    align-items:  center;
+    justify-content: left;
+    padding: 20px;
+    flex-grow: 1;
+    border-radius: 15px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  #banner1 {
+    background-size: cover;
+    background-image: url("../resources/images/rivulets/riv2.webp");
+    background-position: 0 30%;
+    margin-bottom: 5px;
+  }
+
+  #banner2 {
+    background-size: cover;
+    background-image: url("../resources/images/rivulets/riv5.webp");
+    background-position: 0 75%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  #banner3 {
+    background-size: cover;
+    background-image: url("../resources/images/rivulets/riv7.webp");
+    background-position: 0 50%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  #banner4 {
+    background-size: cover;
+    background-image: url("../resources/images/rivulets/riv6.webp");
+    background-position: 0 20%;
+    margin-top: 5px;
+  }  
+  
+  .bs, .bso, .bso-link {
+    position: absolute;
+    left:0;right:0;top:0;bottom:0;
+    display: block;
+    padding: 5px 20px;
+    color: #888;
+    border-radius: 15px;
+  }
+  
+  .bs {
+    z-index: 1;
+  }
+  
+  .bso {
+    cursor: pointer;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.5);
+    opacity: 1.0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .bso:hover {
+    background-color: rgba(255,255,255,0.55);
+    opacity: 0.0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .title {
+    position: relative;
+    z-index: 15;
+    display: block;
+    padding: 0 15px;
+    background-color: #FFF;
+    border-radius: 15px;
+    border: 3px #BF396A solid;
+    color: #BF396A;
+    pointer-events: none;
+  }
+  
+  .bso:hover ~ .title {
+    color: #518C8C;
+    border: 3px #518C8C solid;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
